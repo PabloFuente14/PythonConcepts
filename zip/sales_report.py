@@ -8,8 +8,14 @@ class SalesReport:
         self.report = self.generate_report()
         
     def aggregate_data(self):
-        return list(zip(self.products,self.sales))
-    
+       return list(zip(self.products, self.sales))
+   
+    #this function is just included to note how unzip is done
+    def unzip_data(self):
+        list1, list2 = zip(*self.aggregate_data()) 
+        print(type(list1)) #when unzip, it returns a tuple
+        return list(list1), list(list2) 
+
     def generate_report(self):
         data = self.aggregate_data()
         df = pd.DataFrame(data ,columns = ['Products', 'Sales'])
@@ -19,4 +25,6 @@ class SalesReport:
     
 if __name__ == '__main__':
     report_generator = SalesReport()
+    list1, list2 = report_generator.unzip_data()
+    print(list1,list2)
     print(report_generator.report.head())
