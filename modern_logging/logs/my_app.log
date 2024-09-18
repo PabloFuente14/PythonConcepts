@@ -1,0 +1,11 @@
+[DEBUG|logging_tips|L18] 2024-09-17T20:09:25+0200: debug message
+[INFO|logging_tips|L19] 2024-09-17T20:09:25+0200: info message
+[WARNING|logging_tips|L20] 2024-09-17T20:09:25+0200: warning message
+[ERROR|logging_tips|L21] 2024-09-17T20:09:25+0200: error message
+[CRITICAL|logging_tips|L22] 2024-09-17T20:09:25+0200: critical message
+[ERROR|logging_tips|L26] 2024-09-17T20:09:25+0200: exception message
+Traceback (most recent call last):
+  File "e:\Python\ImportantConcepts\modern_logging\logging_tips.py", line 24, in main
+    1/0
+    ~^~
+ZeroDivisionError: division by zero
