@@ -23,3 +23,4 @@ class MyJSONFormatter(logging.Formatter):
                 record.created, tz=dt.timezone.utc
             ).isoformat(),
         }
+        if record.exec_info is not None
