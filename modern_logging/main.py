@@ -8,14 +8,14 @@ logger = logging.getLogger("myapp")
 
 
 def setup_logging():
-    config_file = pathlib.Path(r'modern_logging\config1.json')
+    config_file = pathlib.Path(r'modern_logging\configs\config1.json')
     with open(config_file) as f_in:
         config = json.load(f_in)
     logging.config.dictConfig(config)
 
 def main():
     setup_logging()
-    logger.debug("debug message")
+    logger.debug("debug message", extra ={'x':'hello'})
     logger.info("info message")
     logger.warning("warning message")
     logger.error("error message")
