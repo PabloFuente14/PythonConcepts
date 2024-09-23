@@ -35,7 +35,7 @@
             "level": "DEBUG",
             "formatter": "json",
             "filename": "modern_logging/logs/my_app.log.jsonl",
-            "maxBytes": 1000,
+            "maxBytes": 45000,
             "backupCount": 3
         }
     },
